@@ -1,5 +1,5 @@
 export default function MeetingButtons({username, meeting, onDelete, onSignOut, onSignIn}) {
-    const isAttending = meeting.participants.includes(username);
+    const isAttending = meeting.participants.find(p => p.login === username);
     const isEmpty = meeting.participants.length === 0;
 
     return <>
